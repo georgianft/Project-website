@@ -132,3 +132,5 @@ searchBtn.addEventListener('click', () => {
 });
 
 appendAllStatements(statementsArr);
+
+// Gtranslate

@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'ANTPOLT', sans-serif;
+    position: relative;
+}
+
+@font-face {
+    font-family: "ANTPOLT";
+    src: url("fonts/ANTPOLT.ttf");
+}
+
+.Gtranslator {
+    color: blue;
+    margin-left: 10px;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu>a:after {
+    content: "\f0da";
+    float: right;
+    border: none;
+    font-family: 'FontAwesome';
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+#line1Id, #line2Id {
+    display: flex;
+    justify-content: center;
+}
+
+#carouselExampleshirt1, #carouselExampleshirt2, #carouselExampleshirt3, #carouselExampleshirt4, #carouselExampleshirt5, #carouselExampleshirt6, #carouselExampleshirt7, #carouselExampleshirt8
+/* , #carouselExampleshirtw1, #carouselExampleshirtw2  */
+{
+    width: 20%;
+    margin-left: 2.5%;
+    margin-right: 2.55%;
+}
+
+.p1class {
+    text-align: center;
+    font-size: 40px;
+    color: black;
+}
+
+#shirt1pWhiteId, #shirt1hWhiteId, #shirt2pWhiteId, #shirt2hWhiteId {
+    color: black;
+}
+
+.bg-dark {
+    background-color:silver!important;
+}
+
+.navbar {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.nav-link {
+    color: white!important;
+}
+
+.navbar-brand {
+    color: white!important;
+}
+
+#signup-form {
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
+.form-field {
+    width: 100%;
+}
+
+.labelcenterclass {
+    width: 100%;
+}
+
+.form-group p {
+    color: gray;
+}
+
+.emailclass {
+    margin-top: 10%;
+}
+
+.submitclass {
+    background-color: royalblue;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn {
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #9e9c9b;
+}
+
+#changeThemeBtn {
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #9e9c9b;
+    top: 100%;
+}
+
+.dark-body {
+    background-color: #212121;
+}
+
+.dark-body p, .dark-body h2, .dark-body #changeThemeBtn {
+    color: white;
+}
+
+.mtavaridiv {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.slide {
+    width: 25%;
+    padding: 20px;
+}
+
+.carousel-indicators {
+    padding: 30px;
+}

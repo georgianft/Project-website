@@ -1,0 +1,86 @@
+.Gtranslator {
+    color: blue;
+    margin-left: 10px;
+}
+
+.AboutUsClass {
+    padding: 2% 10%;
+}
+
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-inner {
+    border-radius: 20px;
+}
+
+#carouselExampleCaptions {
+    width: 700px;
+    margin: 0 auto;
+}
+
+.cardimage {
+    height: 200px;
+}
+
+.card-deck {
+    width: 750px;
+    margin: 4% auto;
+}
+
+#idDiscount1 {
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    width: 50%;
+    margin: 6% 0;
+}
+
+#idDiscount2 {
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    width: 35%;
+    margin: 6% 0;
+}
+
+#idDiscount3 {
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    width: 16%;
+    margin: 6% 0;
+}
+
+.text-muted {
+    color:white!important;
+}
+
+#signup-form {
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
+.form-field {
+    width: 100%;
+}
+
+.labelcenterclass {
+    width: 100%;
+}
+
+.form-group p {
+    color: gray;
+}
+
+.emailclass {
+    margin-top: 10%;
+}
+
+.submitclass {
+    background-color: royalblue;
+    color: white;
+    border-radius: 5px;
+}

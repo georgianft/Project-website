@@ -56,9 +56,6 @@ const statement9 = new Statement('PRODUCT shirtw9', 'carouselExampleshirtw9', 'i
 const statement10 = new Statement('PRODUCT shirtw10', 'carouselExampleshirtw10', 'images/WOMAN/testimages/1.png', 'images/WOMAN/testimages/2.png', 'images/WOMAN/testimages/3.jpg', "$60")
 const statementsArr = [statement1, statement2, statement3, statement4, statement5, statement6, statement7, statement8, statement9, statement10];
 
-const searchBtnMshirts = document.getElementById('search-btn');
-const searchInputMshirts = document.getElementById('search-input');
-
 
 const Mshirts1 = new Mshirts('PRODUCT shirtm1', 'carouselExampleshirtm1', 'images/shirt1/1.jpg', 'images/shirt1/2.jpg', 'images/shirt1/3.jpg', "$10")
 const Mshirts2 = new Mshirts('PRODUCT shirtm2', 'carouselExampleshirtm2', 'images/shirt2/1.jpg', 'images/shirt2/2.jpg', 'images/shirt2/3.jpg', "$20")
@@ -130,26 +127,17 @@ const appendAllMshirtss = (Mshirtss) => {
   }
 }
 
-searchBtnMshirts.addEventListener('click', () => {
-  mtavaridiv.innerHTML = '';
-  if (searchInputMshirts.value === '') {
-      appendAllMshirtss(MshirtssArr);
-      return;
-  }
-  const filteredArr = MshirtssArr.filter((Mshirts) => {
-      // if (Mshirts.title === searchInput.value) {
-      //     return true;
-      // } else {
-      //     return false;
-      // }
-      return Mshirts.title.includes(searchInputMshirts.value) || Mshirts.price.includes(searchInputMshirts.value);
-  });
-  appendAllMshirtss(filteredArr);
-});
 
-appendAllMshirtss(MshirtssArr);
+// appendAllMshirtss(MshirtssArr);
 
 // Gtranslate
+
+for (let index = 0; index < MshirtssArr.length; index++) {
+  const element = MshirtssArr[index];
+  statementsArr.push(element)
+}
+
+
 
 const appendStatement = (statement) => {
   const statementTemplate = `
@@ -210,7 +198,6 @@ const appendAllStatements = (statements) => {
 
 searchBtn.addEventListener('click', () => {
   mtavaridiv.innerHTML = '';
-  statementsArr.push(MshirtssArr)
   if (searchInput.value === '') {
       appendAllStatements(statementsArr);
       return;
@@ -229,3 +216,5 @@ searchBtn.addEventListener('click', () => {
 appendAllStatements(statementsArr);
 
 // Gtranslate
+console.log(MshirtssArr)
+console.log(statementsArr)

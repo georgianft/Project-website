@@ -40,8 +40,8 @@ $(function() {
   });
 
 
-const searchBtn = document.getElementById('search-btn');
-const searchInput = document.getElementById('search-input');
+const searchBtnWshirts = document.getElementById('search-btn-Wshirts');
+const searchInputWshirts = document.getElementById('search-input-Wshirts');
 const mtavaridiv = document.querySelector('.mtavaridiv');
 
 const statement1 = new Statement('PRODUCT shirtw1', 'carouselExampleshirtw1', 'images/WOMAN/testimages/1.jpg', 'images/WOMAN/testimages/2.jpg', 'images/WOMAN/testimages/3.jpg', "$10")
@@ -56,100 +56,6 @@ const statement9 = new Statement('PRODUCT shirtw9', 'carouselExampleshirtw9', 'i
 const statement10 = new Statement('PRODUCT shirtw10', 'carouselExampleshirtw10', 'images/WOMAN/testimages/1.png', 'images/WOMAN/testimages/2.png', 'images/WOMAN/testimages/3.jpg', "$60")
 const statementsArr = [statement1, statement2, statement3, statement4, statement5, statement6, statement7, statement8, statement9, statement10];
 
-const searchBtnMshirts = document.getElementById('search-btn');
-const searchInputMshirts = document.getElementById('search-input');
-
-
-const Mshirts1 = new Mshirts('PRODUCT shirtm1', 'carouselExampleshirtm1', 'images/shirt1/1.jpg', 'images/shirt1/2.jpg', 'images/shirt1/3.jpg', "$10")
-const Mshirts2 = new Mshirts('PRODUCT shirtm2', 'carouselExampleshirtm2', 'images/shirt2/1.jpg', 'images/shirt2/2.jpg', 'images/shirt2/3.jpg', "$20")
-const Mshirts3 = new Mshirts('PRODUCT shirtm3', 'carouselExampleshirtm3', 'images/shirt1/1.jpg', 'images/shirt1/2.jpg', 'images/shirt1/3.jpg', "$30")
-const Mshirts4 = new Mshirts('PRODUCT shirtm4', 'carouselExampleshirtm4', 'images/shirt2/1.jpg', 'images/shirt2/2.jpg', 'images/shirt2/3.jpg', "$60")
-const Mshirts5 = new Mshirts('PRODUCT shirtm5', 'carouselExampleshirtm5', 'images/shirt1/1.jpg', 'images/shirt1/2.jpg', 'images/shirt1/3.jpg', "$80")
-const Mshirts6 = new Mshirts('PRODUCT shirtm6', 'carouselExampleshirtm6', 'images/shirt2/1.jpg', 'images/shirt2/2.jpg', 'images/shirt2/3.jpg', "$30")
-const Mshirts7 = new Mshirts('PRODUCT shirtm7', 'carouselExampleshirtm7', 'images/shirt1/1.jpg', 'images/shirt1/2.jpg', 'images/shirt1/3.jpg', "$30")
-const Mshirts8 = new Mshirts('PRODUCT shirtm8', 'carouselExampleshirtm8', 'images/shirt2/1.jpg', 'images/shirt2/2.jpg', 'images/shirt2/3.jpg', "$75")
-const Mshirts9 = new Mshirts('PRODUCT shirtm9', 'carouselExampleshirtm9', 'images/shirt1/1.jpg', 'images/shirt1/2.jpg', 'images/shirt1/3.jpg', "$100")
-const Mshirts10 = new Mshirts('PRODUCT shirtm10', 'carouselExampleshirtm10', 'images/shirt1/1.jpg', 'images/shirt1/2.jpg', 'images/shirt1/3.jpg', "$60")
-const MshirtssArr = [Mshirts1, Mshirts2, Mshirts3, Mshirts4, Mshirts5, Mshirts6, Mshirts7, Mshirts8, Mshirts9, Mshirts10];
-
-
-const appendMshirts = (Mshirts) => {
-  const MshirtsTemplate = `
-  <div id="${Mshirts.id}" class="carousel slide" data-ride="carousel">
-  <h2>${Mshirts.title}</h2>
-  <ol class="carousel-indicators">
-    <li data-target="#${Mshirts.id}" data-slide-to="0" class="active"></li>
-    <li data-target="#${Mshirts.id}" data-slide-to="1"></li>
-    <li data-target="#${Mshirts.id}" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="${Mshirts.img}" class="d-block w-100" alt="..." width="380" height="340">
-      <div class="carousel-caption d-none d-md-block">
-        <h5></h5>
-        <p></p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="${Mshirts.img2}" class="d-block w-100" alt="..." width="380" height="340">
-      <div class="carousel-caption d-none d-md-block">
-        <h5></h5>
-        <p></p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="${Mshirts.img3}" class="d-block w-100" alt="..." width="380" height="340">
-      <div class="carousel-caption d-none d-md-block">
-        <h5></h5>
-        <p></p>
-      </div>
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#${Mshirts.id}" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#${Mshirts.id}" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-  <div id="">
-    <a href=""></a>
-  </div>
-  <div id="shirt1AddtobagId">
-    <a href="https://www.nokia.com/">Add to basket. Just for ${Mshirts.price}</a>
-  </div>
-</div>`;
-  
-mtavaridiv.innerHTML += MshirtsTemplate;
-}
-
-const appendAllMshirtss = (Mshirtss) => {
-  for (const Mshirts of Mshirtss) {
-      appendMshirts(Mshirts);
-  }
-}
-
-searchBtnMshirts.addEventListener('click', () => {
-  mtavaridiv.innerHTML = '';
-  if (searchInputMshirts.value === '') {
-      appendAllMshirtss(MshirtssArr);
-      return;
-  }
-  const filteredArr = MshirtssArr.filter((Mshirts) => {
-      // if (Mshirts.title === searchInput.value) {
-      //     return true;
-      // } else {
-      //     return false;
-      // }
-      return Mshirts.title.includes(searchInputMshirts.value) || Mshirts.price.includes(searchInputMshirts.value);
-  });
-  appendAllMshirtss(filteredArr);
-});
-
-appendAllMshirtss(MshirtssArr);
-
-// Gtranslate
 
 const appendStatement = (statement) => {
   const statementTemplate = `
@@ -208,22 +114,21 @@ const appendAllStatements = (statements) => {
   }
 }
 
-searchBtn.addEventListener('click', () => {
+searchBtnWshirts.addEventListener('click', () => {
   mtavaridiv.innerHTML = '';
-  statementsArr.push(MshirtssArr)
-  if (searchInput.value === '') {
+  if (searchInputWshirts.value === '') {
       appendAllStatements(statementsArr);
       return;
   }
-  const filteredArr2 = statementsArr.filter((statement) => {
+  const filteredArr = statementsArr.filter((statement) => {
       // if (statement.title === searchInput.value) {
       //     return true;
       // } else {
       //     return false;
       // }
-      return statement.title.includes(searchInput.value) || statement.price.includes(searchInput.value);
+      return statement.title.includes(searchInputWshirts.value) || statement.price.includes(searchInputWshirts.value);
   });
-  appendAllStatements(filteredArr2);
+  appendAllStatements(filteredArr);
 });
 
 appendAllStatements(statementsArr);

@@ -119,7 +119,7 @@ body {
     background-color: #212121;
 }
 
-.dark-body p, .dark-body h2, .dark-body #changeThemeBtn {
+.dark-body p, .dark-body h2, .dark-body #changeThemeBtn, .dark-body .mtavaridivgabout, .dark-body .form-group {
     color: white;
 }
 
